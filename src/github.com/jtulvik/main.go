@@ -12,10 +12,13 @@ func main() {
     fmt.Println("hello world")
     g := Glose {Engelsk: "car", Norsk: "bil"}
     fmt.Println(g.Engelsk)   
-    var o = flag.String("l", "", "search `directory` for include files")
+    var språk = flag.String("s", "", "Velg språk Engelsk eller Norsk")
     flag.Parse()
     fmt.Println("Selected language:")
-    fmt.Println(*o)
+    fmt.Println(*språk)
+    if (*språk == "Norsk"){
+        fmt.Println ("fant Norsk")
+    }
 }
 
 type Glose struct{
